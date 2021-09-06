@@ -54,6 +54,7 @@ namespace Network_Detective
             NetScanner1.Start();
             NetScanner2.Start();
             threadFlag_Start = true;
+           
         }
         public void subNetScanner_Thread_0(String userNetIPAddr)
         {
