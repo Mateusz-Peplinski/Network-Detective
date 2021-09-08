@@ -65,7 +65,7 @@ namespace Network_Detective
             this.openAdvancedNetworkScan.Name = "openAdvancedNetworkScan";
             this.openAdvancedNetworkScan.Size = new System.Drawing.Size(172, 52);
             this.openAdvancedNetworkScan.TabIndex = 1;
-            this.openAdvancedNetworkScan.Text = "Advanced Network Scan";
+            this.openAdvancedNetworkScan.Text = "IP Range Scan";
             this.openAdvancedNetworkScan.UseVisualStyleBackColor = false;
             this.openAdvancedNetworkScan.Click += new System.EventHandler(this.openAdvancedNetworkScan_Click_1);
             // 

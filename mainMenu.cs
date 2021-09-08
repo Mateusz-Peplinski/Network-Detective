@@ -55,7 +55,7 @@ namespace Network_Detective
 
         private void openAdvancedNetworkScan_Click_1(object sender, EventArgs e)
         {
-            advSubnetScan advSubnetForm = new advSubnetScan();
+            rangeScan advSubnetForm = new rangeScan();
             advSubnetForm.Show();
         }
     }

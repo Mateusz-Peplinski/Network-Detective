@@ -1,7 +1,7 @@
 ﻿
 namespace Network_Detective.subnetClass
 {
-    partial class advSubnetScan
+    partial class rangeScan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Network_Detective.subnetClass
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(advSubnetScan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rangeScan));
             this.startAdvScan = new System.Windows.Forms.Button();
             this.IPAddrRange1 = new System.Windows.Forms.TextBox();
             this.IPAddrRange0 = new System.Windows.Forms.TextBox();
@@ -131,12 +131,12 @@ namespace Network_Detective.subnetClass
             this.stopAdvScan.UseVisualStyleBackColor = false;
             this.stopAdvScan.Click += new System.EventHandler(this.stopAdvScan_Click);
             // 
-            // advSubnetScan
+            // rangeScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(450, 450);
+            this.ClientSize = new System.Drawing.Size(441, 450);
             this.Controls.Add(this.stopAdvScan);
             this.Controls.Add(this.advScanMainTextBox);
             this.Controls.Add(this.button2);
@@ -148,8 +148,8 @@ namespace Network_Detective.subnetClass
             this.Controls.Add(this.IPAddrRange1);
             this.Controls.Add(this.startAdvScan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "advSubnetScan";
-            this.Text = "Network Detective (Advanced Subnet Scan)";
+            this.Name = "rangeScan";
+            this.Text = "Network Detective (IP Range Scan)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.advSubnetScan_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

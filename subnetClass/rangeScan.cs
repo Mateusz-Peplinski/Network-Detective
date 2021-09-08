@@ -12,14 +12,14 @@ using System.Net;
 
 namespace Network_Detective.subnetClass
 {
-    public partial class advSubnetScan : Form
+    public partial class rangeScan : Form
     {
 
         public volatile bool threadFlag_Abort;
         public volatile bool threadFlag_Start = false;
         public Thread advScanner0;
 
-        public advSubnetScan()
+        public rangeScan()
         {
             InitializeComponent();
             stopAdvScan.Enabled = false;
@@ -35,11 +35,14 @@ namespace Network_Detective.subnetClass
 
         private void startAdvScan_Click(object sender, EventArgs e)
         {
+
+            advScanMainTextBox.Clear();
+
             startAdvScan.Enabled = false;
             threadFlag_Abort = false;
 
             String startIPAddr = IPAddrRange0.Text;
-            String endIPAddr = IPAddrRange0.Text;
+            String endIPAddr = IPAddrRange1.Text;
 
             advScanner0 = new Thread(() => advScan_Thread(startIPAddr, endIPAddr));
             advScanner0.Start();
@@ -68,12 +71,12 @@ namespace Network_Detective.subnetClass
                     if (subNetPingStatus0 == true)
                     {
 
-                        advScanMainTextBox.Text += $"{startIPAddr} - SUCCESS \n";
+                        writeStatusMessage($"{startIPAddr} - SUCCESS {Environment.NewLine}");
 
                     }
                     else
                     {
-                        advScanMainTextBox.Text += $"{startIPAddr} - FAILED \n";
+                        writeStatusMessage($"{startIPAddr} - FAILED {Environment.NewLine}");
 
                     }
                     counter++;
@@ -83,6 +86,7 @@ namespace Network_Detective.subnetClass
                 
                 if(oct4IP1  == oct4IP2)
                 {
+                    writeStatusMessage($"{Environment.NewLine} ---  Scan Finished! --- {Environment.NewLine}");
                     threadFlag_Abort = true;
                     break;
                 }
@@ -94,12 +98,12 @@ namespace Network_Detective.subnetClass
                 if (subNetPingStatus == true)
                 {
 
-                    advScanMainTextBox.Text += $"{nextIPToScan} - SUCCESS \n";
+                    writeStatusMessage($"{nextIPToScan} - SUCCESS {Environment.NewLine}");
 
                 }
                 else
                 {
-                    advScanMainTextBox.Text += $"{nextIPToScan} - FAILED \n";
+                    writeStatusMessage($"{nextIPToScan} - FAILED {Environment.NewLine}");
 
                 }
             }
@@ -107,10 +111,20 @@ namespace Network_Detective.subnetClass
 
         private void stopAdvScan_Click(object sender, EventArgs e)
         {
+            writeStatusMessage($"{Environment.NewLine} --- Aborting Scan! --- {Environment.NewLine}");
             threadFlag_Abort = true;
             advScanner0.Abort();
             startAdvScan.Enabled = true;
             stopAdvScan.Enabled = false;
+        }
+        public void writeStatusMessage(string text)
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke(new Action<string>(writeStatusMessage), new object[] { text });
+                return;
+            }
+            advScanMainTextBox.Text += text;
         }
 
         private void advSubnetScan_FormClosing(object sender, FormClosingEventArgs e)

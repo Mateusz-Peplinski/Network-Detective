@@ -76,11 +76,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="subnetClass\advSubnetScan.cs">
+    <Compile Include="subnetClass\rangeScan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="subnetClass\advSubnetScan.Designer.cs">
-      <DependentUpon>advSubnetScan.cs</DependentUpon>
+    <Compile Include="subnetClass\rangeScan.Designer.cs">
+      <DependentUpon>rangeScan.cs</DependentUpon>
     </Compile>
     <Compile Include="subnetClass\networkScanClass.cs" />
     <Compile Include="subnetClass\networkScanForm.cs">
@@ -123,8 +123,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="subnetClass\advSubnetScan.resx">
-      <DependentUpon>advSubnetScan.cs</DependentUpon>
+    <EmbeddedResource Include="subnetClass\rangeScan.resx">
+      <DependentUpon>rangeScan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="subnetClass\networkScanForm.resx">
       <DependentUpon>networkScanForm.cs</DependentUpon>
