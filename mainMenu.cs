@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Network_Detective.portScanningClass;
-
+using Network_Detective.subnetClass;
 namespace Network_Detective
 {
     public partial class mainMenu : Form
@@ -50,6 +50,13 @@ namespace Network_Detective
         {
             portScanAdvanced portScanAdvancedFrom = new portScanAdvanced();
             portScanAdvancedFrom.Show();
+        }
+
+
+        private void openAdvancedNetworkScan_Click_1(object sender, EventArgs e)
+        {
+            advSubnetScan advSubnetForm = new advSubnetScan();
+            advSubnetForm.Show();
         }
     }
 }

@@ -29,36 +29,44 @@ namespace Network_Detective.subnetClass
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(advSubnetScan));
+            this.startAdvScan = new System.Windows.Forms.Button();
+            this.IPAddrRange1 = new System.Windows.Forms.TextBox();
+            this.IPAddrRange0 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.subnetTextBox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.advScanMainTextBox = new System.Windows.Forms.TextBox();
+            this.stopAdvScan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // startAdvScan
             // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.Location = new System.Drawing.Point(30, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
+            this.startAdvScan.BackColor = System.Drawing.Color.LawnGreen;
+            this.startAdvScan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.startAdvScan.Location = new System.Drawing.Point(332, 9);
+            this.startAdvScan.Name = "startAdvScan";
+            this.startAdvScan.Size = new System.Drawing.Size(75, 23);
+            this.startAdvScan.TabIndex = 0;
+            this.startAdvScan.Text = "Start";
+            this.startAdvScan.UseVisualStyleBackColor = false;
+            this.startAdvScan.Click += new System.EventHandler(this.startAdvScan_Click);
             // 
-            // textBox1
+            // IPAddrRange1
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.IPAddrRange1.Location = new System.Drawing.Point(184, 16);
+            this.IPAddrRange1.Name = "IPAddrRange1";
+            this.IPAddrRange1.Size = new System.Drawing.Size(100, 20);
+            this.IPAddrRange1.TabIndex = 1;
             // 
-            // textBox4
+            // IPAddrRange0
             // 
-            this.textBox4.Location = new System.Drawing.Point(65, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.IPAddrRange0.Location = new System.Drawing.Point(65, 16);
+            this.IPAddrRange0.Name = "IPAddrRange0";
+            this.IPAddrRange0.Size = new System.Drawing.Size(100, 20);
+            this.IPAddrRange0.TabIndex = 4;
             // 
             // label1
             // 
@@ -78,19 +86,71 @@ namespace Network_Detective.subnetClass
             this.label2.TabIndex = 6;
             this.label2.Text = "to";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Subnet (Default is \\24): ";
+            // 
+            // subnetTextBox
+            // 
+            this.subnetTextBox.Location = new System.Drawing.Point(15, 64);
+            this.subnetTextBox.Name = "subnetTextBox";
+            this.subnetTextBox.Size = new System.Drawing.Size(56, 20);
+            this.subnetTextBox.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(128, 43);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Show Valid Subnets ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // advScanMainTextBox
+            // 
+            this.advScanMainTextBox.Location = new System.Drawing.Point(12, 99);
+            this.advScanMainTextBox.Multiline = true;
+            this.advScanMainTextBox.Name = "advScanMainTextBox";
+            this.advScanMainTextBox.Size = new System.Drawing.Size(414, 339);
+            this.advScanMainTextBox.TabIndex = 12;
+            // 
+            // stopAdvScan
+            // 
+            this.stopAdvScan.BackColor = System.Drawing.Color.Crimson;
+            this.stopAdvScan.Location = new System.Drawing.Point(332, 43);
+            this.stopAdvScan.Name = "stopAdvScan";
+            this.stopAdvScan.Size = new System.Drawing.Size(75, 23);
+            this.stopAdvScan.TabIndex = 13;
+            this.stopAdvScan.Text = "Stop";
+            this.stopAdvScan.UseVisualStyleBackColor = false;
+            this.stopAdvScan.Click += new System.EventHandler(this.stopAdvScan_Click);
+            // 
             // advSubnetScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(450, 450);
+            this.Controls.Add(this.stopAdvScan);
+            this.Controls.Add(this.advScanMainTextBox);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.subnetTextBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.IPAddrRange0);
+            this.Controls.Add(this.IPAddrRange1);
+            this.Controls.Add(this.startAdvScan);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "advSubnetScan";
-            this.Text = "advSubnetScan";
+            this.Text = "Network Detective (Advanced Subnet Scan)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.advSubnetScan_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,10 +158,15 @@ namespace Network_Detective.subnetClass
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button startAdvScan;
+        private System.Windows.Forms.TextBox IPAddrRange1;
+        private System.Windows.Forms.TextBox IPAddrRange0;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox subnetTextBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox advScanMainTextBox;
+        private System.Windows.Forms.Button stopAdvScan;
     }
 }

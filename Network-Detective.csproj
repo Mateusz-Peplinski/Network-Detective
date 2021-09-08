@@ -89,6 +89,12 @@
     <Compile Include="subnetClass\networkScanForm.Designer.cs">
       <DependentUpon>networkScanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="subnetClass\showSubnetOpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subnetClass\showSubnetOpt.Designer.cs">
+      <DependentUpon>showSubnetOpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="subnetClass\subnetScanHelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="subnetClass\networkScanForm.resx">
       <DependentUpon>networkScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subnetClass\showSubnetOpt.resx">
+      <DependentUpon>showSubnetOpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="subnetClass\subnetScanHelpForm.resx">
       <DependentUpon>subnetScanHelpForm.cs</DependentUpon>

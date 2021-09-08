@@ -31,7 +31,7 @@ namespace Network_Detective
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainMenu));
             this.openPingForm = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.openAdvancedNetworkScan = new System.Windows.Forms.Button();
             this.openSubnetForm = new System.Windows.Forms.Button();
             this.openPortScanForm = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,17 +56,18 @@ namespace Network_Detective
             this.openPingForm.UseVisualStyleBackColor = false;
             this.openPingForm.Click += new System.EventHandler(this.openPingForm_Click);
             // 
-            // button1
+            // openAdvancedNetworkScan
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(303, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 52);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Advanced Network Scan";
-            this.button1.UseVisualStyleBackColor = false;
+            this.openAdvancedNetworkScan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.openAdvancedNetworkScan.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.openAdvancedNetworkScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openAdvancedNetworkScan.Location = new System.Drawing.Point(303, 350);
+            this.openAdvancedNetworkScan.Name = "openAdvancedNetworkScan";
+            this.openAdvancedNetworkScan.Size = new System.Drawing.Size(172, 52);
+            this.openAdvancedNetworkScan.TabIndex = 1;
+            this.openAdvancedNetworkScan.Text = "Advanced Network Scan";
+            this.openAdvancedNetworkScan.UseVisualStyleBackColor = false;
+            this.openAdvancedNetworkScan.Click += new System.EventHandler(this.openAdvancedNetworkScan_Click_1);
             // 
             // openSubnetForm
             // 
@@ -157,7 +158,7 @@ namespace Network_Detective
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.openPortScanForm);
             this.Controls.Add(this.openSubnetForm);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.openAdvancedNetworkScan);
             this.Controls.Add(this.openPingForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainMenu";
@@ -172,7 +173,7 @@ namespace Network_Detective
         #endregion
 
         private System.Windows.Forms.Button openPingForm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button openAdvancedNetworkScan;
         private System.Windows.Forms.Button openSubnetForm;
         private System.Windows.Forms.Button openPortScanForm;
         private System.Windows.Forms.PictureBox pictureBox1;

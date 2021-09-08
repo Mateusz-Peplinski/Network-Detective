@@ -214,7 +214,7 @@ namespace Network_Detective
             this.Controls.Add(this.showResultsBox0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "subnetScanForm";
-            this.Text = "Network Detective (Subnet Scan)";
+            this.Text = "Network Detective (Basic Full Subnet Scan)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.subnetScanForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
