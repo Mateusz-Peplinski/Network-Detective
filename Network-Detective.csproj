@@ -70,68 +70,68 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="pingClass\pingClass.cs" />
-    <Compile Include="pingClass\pingForm.cs">
+    <Compile Include="src\pingClass\pingClass.cs" />
+    <Compile Include="src\pingClass\pingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pingClass\pingForm.Designer.cs">
+    <Compile Include="src\pingClass\pingForm.Designer.cs">
       <DependentUpon>pingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="portScanningClass\portScanAdvanced.cs">
+    <Compile Include="src\portScanningClass\portScanAdvanced.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="portScanningClass\portScanAdvanced.Designer.cs">
+    <Compile Include="src\portScanningClass\portScanAdvanced.Designer.cs">
       <DependentUpon>portScanAdvanced.cs</DependentUpon>
     </Compile>
-    <Compile Include="portScanningClass\portScanForm.cs">
+    <Compile Include="src\portScanningClass\portScanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="portScanningClass\portScanForm.Designer.cs">
+    <Compile Include="src\portScanningClass\portScanForm.Designer.cs">
       <DependentUpon>portScanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="subnetClass\rangeScan.cs">
+    <Compile Include="src\subnetClass\rangeScan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="subnetClass\rangeScan.Designer.cs">
+    <Compile Include="src\subnetClass\rangeScan.Designer.cs">
       <DependentUpon>rangeScan.cs</DependentUpon>
     </Compile>
-    <Compile Include="subnetClass\networkScanClass.cs" />
-    <Compile Include="subnetClass\networkScanForm.cs">
+    <Compile Include="src\subnetClass\networkScanClass.cs" />
+    <Compile Include="src\subnetClass\networkScanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="subnetClass\networkScanForm.Designer.cs">
+    <Compile Include="src\subnetClass\networkScanForm.Designer.cs">
       <DependentUpon>networkScanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="subnetClass\showSubnetOpt.cs">
+    <Compile Include="src\subnetClass\showSubnetOpt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="subnetClass\showSubnetOpt.Designer.cs">
+    <Compile Include="src\subnetClass\showSubnetOpt.Designer.cs">
       <DependentUpon>showSubnetOpt.cs</DependentUpon>
     </Compile>
-    <Compile Include="subnetClass\subnetScanHelpForm.cs">
+    <Compile Include="src\subnetClass\subnetScanHelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="subnetClass\subnetScanHelpForm.Designer.cs">
+    <Compile Include="src\subnetClass\subnetScanHelpForm.Designer.cs">
       <DependentUpon>subnetScanHelpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="traceRouteClass\traceRouteForm.cs">
+    <Compile Include="src\traceRouteClass\traceRouteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="traceRouteClass\traceRouteForm.Designer.cs">
+    <Compile Include="src\traceRouteClass\traceRouteForm.Designer.cs">
       <DependentUpon>traceRouteForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pingClass\pingForm.resx">
+    <EmbeddedResource Include="src\pingClass\pingForm.resx">
       <DependentUpon>pingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="portScanningClass\portScanAdvanced.resx">
+    <EmbeddedResource Include="src\portScanningClass\portScanAdvanced.resx">
       <DependentUpon>portScanAdvanced.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="portScanningClass\portScanForm.resx">
+    <EmbeddedResource Include="src\portScanningClass\portScanForm.resx">
       <DependentUpon>portScanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -144,19 +144,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="subnetClass\rangeScan.resx">
+    <EmbeddedResource Include="src\subnetClass\rangeScan.resx">
       <DependentUpon>rangeScan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="subnetClass\networkScanForm.resx">
+    <EmbeddedResource Include="src\subnetClass\networkScanForm.resx">
       <DependentUpon>networkScanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="subnetClass\showSubnetOpt.resx">
+    <EmbeddedResource Include="src\subnetClass\showSubnetOpt.resx">
       <DependentUpon>showSubnetOpt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="subnetClass\subnetScanHelpForm.resx">
+    <EmbeddedResource Include="src\subnetClass\subnetScanHelpForm.resx">
       <DependentUpon>subnetScanHelpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="traceRouteClass\traceRouteForm.resx">
+    <EmbeddedResource Include="src\traceRouteClass\traceRouteForm.resx">
       <DependentUpon>traceRouteForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
