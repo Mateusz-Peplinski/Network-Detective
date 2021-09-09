@@ -58,5 +58,11 @@ namespace Network_Detective
             rangeScan advSubnetForm = new rangeScan();
             advSubnetForm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            traceRouteForm traceRouteForm = new traceRouteForm();
+            traceRouteForm.Show();
+        }
     }
 }
