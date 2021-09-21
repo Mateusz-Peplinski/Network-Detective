@@ -40,5 +40,11 @@ namespace Network_Detective
                 statusBox.Text += "Failed";
             }
         }
+
+        private void testLoopbackButton_Click(object sender, EventArgs e)
+        {
+            loopbackForm loopbackForm = new loopbackForm();
+            loopbackForm.Show();
+        }
     }
 }

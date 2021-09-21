@@ -70,6 +70,12 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\pingClass\loopbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\pingClass\loopbackForm.Designer.cs">
+      <DependentUpon>loopbackForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\pingClass\pingClass.cs" />
     <Compile Include="src\pingClass\pingForm.cs">
       <SubType>Form</SubType>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\pingClass\loopbackForm.resx">
+      <DependentUpon>loopbackForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\pingClass\pingForm.resx">
       <DependentUpon>pingForm.cs</DependentUpon>

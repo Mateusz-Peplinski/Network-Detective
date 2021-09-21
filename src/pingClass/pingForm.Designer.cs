@@ -35,6 +35,7 @@ namespace Network_Detective
             this.label1 = new System.Windows.Forms.Label();
             this.statusBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.testLoopbackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // userIPAddrBox
@@ -83,12 +84,24 @@ namespace Network_Detective
             this.label2.TabIndex = 4;
             this.label2.Text = "IP Address:";
             // 
+            // testLoopbackButton
+            // 
+            this.testLoopbackButton.BackColor = System.Drawing.Color.SkyBlue;
+            this.testLoopbackButton.Location = new System.Drawing.Point(298, 96);
+            this.testLoopbackButton.Name = "testLoopbackButton";
+            this.testLoopbackButton.Size = new System.Drawing.Size(110, 23);
+            this.testLoopbackButton.TabIndex = 5;
+            this.testLoopbackButton.Text = "Test Loopback";
+            this.testLoopbackButton.UseVisualStyleBackColor = false;
+            this.testLoopbackButton.Click += new System.EventHandler(this.testLoopbackButton_Click);
+            // 
             // pingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(420, 121);
+            this.Controls.Add(this.testLoopbackButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.statusBox);
             this.Controls.Add(this.label1);
@@ -109,5 +122,6 @@ namespace Network_Detective
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox statusBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button testLoopbackButton;
     }
 }
