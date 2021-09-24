@@ -36,9 +36,10 @@ namespace Network_Detective
             this.openPortScanForm = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.opendumpProcessForm = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dumpProcessForm = new System.Windows.Forms.Button();
+            this.openwifiSpeedtest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +124,20 @@ namespace Network_Detective
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // opendumpProcessForm
+            // 
+            this.opendumpProcessForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.opendumpProcessForm.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.opendumpProcessForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opendumpProcessForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opendumpProcessForm.Location = new System.Drawing.Point(33, 465);
+            this.opendumpProcessForm.Name = "opendumpProcessForm";
+            this.opendumpProcessForm.Size = new System.Drawing.Size(172, 51);
+            this.opendumpProcessForm.TabIndex = 8;
+            this.opendumpProcessForm.Text = "Dump Process";
+            this.opendumpProcessForm.UseVisualStyleBackColor = false;
+            this.opendumpProcessForm.Click += new System.EventHandler(this.dumpProcessForm_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Network_Detective.Properties.Resources.mainMenuTitle_NAME;
@@ -146,19 +161,19 @@ namespace Network_Detective
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // dumpProcessForm
+            // openwifiSpeedtest
             // 
-            this.dumpProcessForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dumpProcessForm.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.dumpProcessForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dumpProcessForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dumpProcessForm.Location = new System.Drawing.Point(33, 465);
-            this.dumpProcessForm.Name = "dumpProcessForm";
-            this.dumpProcessForm.Size = new System.Drawing.Size(172, 51);
-            this.dumpProcessForm.TabIndex = 8;
-            this.dumpProcessForm.Text = "Dump Process";
-            this.dumpProcessForm.UseVisualStyleBackColor = false;
-            this.dumpProcessForm.Click += new System.EventHandler(this.dumpProcessForm_Click);
+            this.openwifiSpeedtest.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.openwifiSpeedtest.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.openwifiSpeedtest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openwifiSpeedtest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openwifiSpeedtest.Location = new System.Drawing.Point(372, 465);
+            this.openwifiSpeedtest.Name = "openwifiSpeedtest";
+            this.openwifiSpeedtest.Size = new System.Drawing.Size(172, 51);
+            this.openwifiSpeedtest.TabIndex = 9;
+            this.openwifiSpeedtest.Text = "WIFI Speed Test";
+            this.openwifiSpeedtest.UseVisualStyleBackColor = false;
+            this.openwifiSpeedtest.Click += new System.EventHandler(this.openwifiSpeedtest_Click);
             // 
             // mainMenu
             // 
@@ -167,7 +182,8 @@ namespace Network_Detective
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(945, 597);
-            this.Controls.Add(this.dumpProcessForm);
+            this.Controls.Add(this.openwifiSpeedtest);
+            this.Controls.Add(this.opendumpProcessForm);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -196,7 +212,8 @@ namespace Network_Detective
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button dumpProcessForm;
+        private System.Windows.Forms.Button opendumpProcessForm;
+        private System.Windows.Forms.Button openwifiSpeedtest;
     }
 }
 

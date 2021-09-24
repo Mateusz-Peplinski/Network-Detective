@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Network_Detective.portScanningClass;
 using Network_Detective.subnetClass;
 using Network_Detective.src.processDumperClass;
+using Network_Detective.src.speedTestSrc;
     
 namespace Network_Detective
 {
@@ -71,6 +72,12 @@ namespace Network_Detective
         {
             processDumperForm processDumperForm = new processDumperForm();
             processDumperForm.Show();
+        }
+
+        private void openwifiSpeedtest_Click(object sender, EventArgs e)
+        {
+            wifiSpeedTestForm wifiSpeedTestForm = new wifiSpeedTestForm();
+            wifiSpeedTestForm.Show();
         }
     }
 }
