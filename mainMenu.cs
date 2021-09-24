@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Network_Detective.portScanningClass;
 using Network_Detective.subnetClass;
+using Network_Detective.src.processDumperClass;
+    
 namespace Network_Detective
 {
     public partial class mainMenu : Form
@@ -63,6 +65,12 @@ namespace Network_Detective
         {
             traceRouteForm traceRouteForm = new traceRouteForm();
             traceRouteForm.Show();
+        }
+
+        private void dumpProcessForm_Click(object sender, EventArgs e)
+        {
+            processDumperForm processDumperForm = new processDumperForm();
+            processDumperForm.Show();
         }
     }
 }

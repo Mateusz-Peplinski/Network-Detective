@@ -97,6 +97,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\processDumperClass\processDumperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\processDumperClass\processDumperForm.Designer.cs">
+      <DependentUpon>processDumperForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\subnetClass\rangeScan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="src\processDumperClass\processDumperForm.resx">
+      <DependentUpon>processDumperForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\subnetClass\rangeScan.resx">
       <DependentUpon>rangeScan.cs</DependentUpon>
     </EmbeddedResource>

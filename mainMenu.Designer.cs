@@ -38,17 +38,18 @@ namespace Network_Detective
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dumpProcessForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // openPingForm
             // 
-            this.openPingForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.openPingForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.openPingForm.BackColor = System.Drawing.SystemColors.MenuBar;
             this.openPingForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openPingForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPingForm.Location = new System.Drawing.Point(33, 350);
+            this.openPingForm.Location = new System.Drawing.Point(33, 372);
             this.openPingForm.Name = "openPingForm";
             this.openPingForm.Size = new System.Drawing.Size(172, 51);
             this.openPingForm.TabIndex = 0;
@@ -58,10 +59,10 @@ namespace Network_Detective
             // 
             // openAdvancedNetworkScan
             // 
-            this.openAdvancedNetworkScan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.openAdvancedNetworkScan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.openAdvancedNetworkScan.BackColor = System.Drawing.SystemColors.MenuBar;
             this.openAdvancedNetworkScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openAdvancedNetworkScan.Location = new System.Drawing.Point(303, 350);
+            this.openAdvancedNetworkScan.Location = new System.Drawing.Point(372, 370);
             this.openAdvancedNetworkScan.Name = "openAdvancedNetworkScan";
             this.openAdvancedNetworkScan.Size = new System.Drawing.Size(172, 52);
             this.openAdvancedNetworkScan.TabIndex = 1;
@@ -71,11 +72,11 @@ namespace Network_Detective
             // 
             // openSubnetForm
             // 
-            this.openSubnetForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.openSubnetForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.openSubnetForm.BackColor = System.Drawing.SystemColors.MenuBar;
             this.openSubnetForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openSubnetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openSubnetForm.Location = new System.Drawing.Point(33, 245);
+            this.openSubnetForm.Location = new System.Drawing.Point(33, 282);
             this.openSubnetForm.Name = "openSubnetForm";
             this.openSubnetForm.Size = new System.Drawing.Size(172, 51);
             this.openSubnetForm.TabIndex = 2;
@@ -85,10 +86,10 @@ namespace Network_Detective
             // 
             // openPortScanForm
             // 
-            this.openPortScanForm.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.openPortScanForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.openPortScanForm.BackColor = System.Drawing.SystemColors.MenuBar;
             this.openPortScanForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPortScanForm.Location = new System.Drawing.Point(303, 246);
+            this.openPortScanForm.Location = new System.Drawing.Point(372, 282);
             this.openPortScanForm.Name = "openPortScanForm";
             this.openPortScanForm.Size = new System.Drawing.Size(172, 51);
             this.openPortScanForm.TabIndex = 3;
@@ -98,10 +99,10 @@ namespace Network_Detective
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(570, 245);
+            this.button2.Location = new System.Drawing.Point(732, 282);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(172, 52);
             this.button2.TabIndex = 5;
@@ -111,10 +112,10 @@ namespace Network_Detective
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button3.BackColor = System.Drawing.SystemColors.MenuBar;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(570, 349);
+            this.button3.Location = new System.Drawing.Point(732, 370);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(172, 52);
             this.button3.TabIndex = 6;
@@ -133,18 +134,31 @@ namespace Network_Detective
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox1.Image = global::Network_Detective.Properties.Resources.mainMenuTitle256;
             this.pictureBox1.Location = new System.Drawing.Point(244, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 212);
+            this.pictureBox1.Size = new System.Drawing.Size(401, 248);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // dumpProcessForm
+            // 
+            this.dumpProcessForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dumpProcessForm.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.dumpProcessForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dumpProcessForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dumpProcessForm.Location = new System.Drawing.Point(33, 465);
+            this.dumpProcessForm.Name = "dumpProcessForm";
+            this.dumpProcessForm.Size = new System.Drawing.Size(172, 51);
+            this.dumpProcessForm.TabIndex = 8;
+            this.dumpProcessForm.Text = "Dump Process";
+            this.dumpProcessForm.UseVisualStyleBackColor = false;
+            this.dumpProcessForm.Click += new System.EventHandler(this.dumpProcessForm_Click);
             // 
             // mainMenu
             // 
@@ -152,7 +166,8 @@ namespace Network_Detective
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(815, 450);
+            this.ClientSize = new System.Drawing.Size(945, 597);
+            this.Controls.Add(this.dumpProcessForm);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -181,6 +196,7 @@ namespace Network_Detective
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button dumpProcessForm;
     }
 }
 
