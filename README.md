@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"><img width="500" src="resources/mainMenu/mainMenuTitle.png" alt="mainTitle"> 
-<\p>
+
                                                                    
 Network Detective is a network information gathering tool. (IN PROGRESS)
 
