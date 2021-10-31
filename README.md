@@ -3,8 +3,9 @@
 <p align="center">
   <img width="75" src="resources/Network-Detective-icon.ico" alt="mainIcon">
 </p>
-
-## Network-Detective
+<p align="center">
+# Network-Detective
+</p>
 Network Detective is a network information gathering tool. (IN PROGRESS)
 
 ![MainWindow](READMEimg/Capture.PNG)
