@@ -141,6 +141,12 @@
     <Compile Include="src\traceRouteSrc\traceRouteForm.Designer.cs">
       <DependentUpon>traceRouteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\speedTestSrc\testAllNetworkInterfaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\speedTestSrc\testAllNetworkInterfaces.Designer.cs">
+      <DependentUpon>testAllNetworkInterfaces.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="src\processDumperSrc\processDumperForm.resx">
       <DependentUpon>processDumperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\speedTestSrc\testAllNetworkInterfaces.resx">
+      <DependentUpon>testAllNetworkInterfaces.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\speedTestSrc\wifiSpeedTestForm.resx">
       <DependentUpon>wifiSpeedTestForm.cs</DependentUpon>
