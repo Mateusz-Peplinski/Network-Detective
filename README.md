@@ -6,7 +6,7 @@
 
 <p align="center"><img width="500" src="resources/mainMenu/mainMenuTitle.png" alt="mainTitle"> 
 
-<h4 align="center">By: Mateusz Peplinski</h4>
+<h3 align="center">By: Mateusz Peplinski</h3>
 
 
 Network Detective is a network information gathering tool. (IN PROGRESS)
