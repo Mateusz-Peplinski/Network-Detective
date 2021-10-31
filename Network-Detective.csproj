@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Network-Detective-icon.ico</ApplicationIcon>
+    <ApplicationIcon>resources\Network-Detective-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,10 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mainMenu.cs">
+    <Compile Include="src\mainMenu_EntryPoint\mainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainMenu.Designer.cs">
+    <Compile Include="src\mainMenu_EntryPoint\mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="src\pingSrc\loopbackForm.cs">
@@ -96,7 +96,7 @@
     <Compile Include="src\portScanningSrc\portScanForm.Designer.cs">
       <DependentUpon>portScanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\processDumperSrc\processDumperForm.cs">
       <SubType>Form</SubType>
@@ -147,7 +147,7 @@
     <Compile Include="src\speedTestSrc\testAllNetworkInterfaces.Designer.cs">
       <DependentUpon>testAllNetworkInterfaces.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="mainMenu.resx">
+    <EmbeddedResource Include="src\mainMenu_EntryPoint\mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\pingSrc\loopbackForm.resx">
@@ -210,7 +210,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Network-Detective-icon.ico" />
+    <Content Include="resources\Network-Detective-icon.ico" />
     <None Include="resources\mainMenu\mainMenuTitle-NAME.png" />
     <None Include="resources\mainMenu\mainMenuTitle256.png" />
     <None Include="resources\mainMenu\mainMenuTitle.png" />
