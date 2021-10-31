@@ -1,4 +1,4 @@
-<img src="Network-Detective-icon.ico" alt="drawing" width="75"/>
+![mainIcon](resources/Network-Detective-icon.ico)
 
 ## Network-Detective
 Network Detective is a network information gathering tool. (IN PROGRESS)
