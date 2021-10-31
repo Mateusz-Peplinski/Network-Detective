@@ -5,10 +5,9 @@
 </p>
 
 <p align="center">
-  <img width="300" src="resources/mainMenu/mainMenuTitle.png" alt="mainTitle>
+  <img width="500" src="resources/mainMenu/mainMenuTitle.png" alt="mainTitle>
 </p>
                                                                    
-<h1 align="center">Network Detective</h1>
 Network Detective is a network information gathering tool. (IN PROGRESS)
 
 ![MainWindow](READMEimg/Capture.PNG)
