@@ -79,5 +79,11 @@ namespace Network_Detective
             wifiSpeedTestForm wifiSpeedTestForm = new wifiSpeedTestForm();
             wifiSpeedTestForm.Show();
         }
+
+        private void NetworkAdapterInfoButton_Click(object sender, EventArgs e)
+        {
+            networkAdapterInformationForm networkAdapterInformationForm = new networkAdapterInformationForm();
+            networkAdapterInformationForm.Show();
+        }
     }
 }

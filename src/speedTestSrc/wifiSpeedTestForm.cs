@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -15,8 +17,6 @@ namespace Network_Detective.src.speedTestSrc
 {
     public partial class wifiSpeedTestForm : Form
     {
-        private volatile bool threadFlag_Abort;
-        private volatile float seconds;
 
         public wifiSpeedTestForm()
         {
@@ -25,50 +25,28 @@ namespace Network_Detective.src.speedTestSrc
 
         private void startSpeedTestButton_Click(object sender, EventArgs e)
         {
-            threadFlag_Abort = false;
 
-            Thread timer_THREAD0 = new Thread(timer_THREAD);
-            currentSpeedtextBox.Clear();
-            timer_THREAD0.Start();
-
-            WebClient webClient = new WebClient();
-
-            Uri URL = new Uri("http://ipv4.download.thinkbroadband.com:81/20MB.zip");
-            while (!threadFlag_Abort)
-            {
-                using (WebClient wc = new WebClient())
-                {
-                    wc.Headers.Add("User-Agent: Other");
-                    wc.DownloadFile(URL, "wifi_TEST_TEMP.zip");
-                    threadFlag_Abort = true;
-                    timer_THREAD0.Abort();
-                }
-            }
-
-            String wifiFile = "wifi_TEST_TEMP.zip";
-            long FileSize = wifiFile.Length;
-
-            double speedInBytes = FileSize / seconds;
-
-            double speedInMegaBits = (speedInBytes / 8) / 8 ;
-            //currentSpeedtextBox.Text += string.Format("{0:0.#}Mbps", speedInMegaBits);
-            currentSpeedtextBox.Text += string.Format("{0}", speedInMegaBits);
-
+            runSpeedTest();
 
         }
-        private void timer_THREAD()
-        {
-            Stopwatch downloadTimer = new Stopwatch();
-            downloadTimer.Reset();
-            downloadTimer.Start();
-            while (seconds < 60)
-            {
-                seconds = (float)downloadTimer.Elapsed.TotalSeconds;
-            }
-            threadFlag_Abort = true;
-            downloadTimer.Stop();
 
-            seconds = (float)downloadTimer.Elapsed.TotalSeconds;
+        private void runSpeedTest()
+        {
+            double[] speeds = new double[5];
+            for (int i = 0; i < 5; i++)
+            {
+                int fileSize = 50000; //Size of File in KB.
+                WebClient client = new WebClient();
+                DateTime startTime = DateTime.Now;
+                client.DownloadFile("https://sabnzbd.org/tests/internetspeed/50MB.bin", "50MB.bin");
+                DateTime endTime = DateTime.Now;
+                File.Delete("50MB.bin");
+                speeds[i] = Math.Round((fileSize / (endTime - startTime).TotalSeconds));
+                currentSpeedtextBox.Text += (speeds[i] = Math.Round((fileSize / (endTime - startTime).TotalSeconds))).ToString(); 
+                currentSpeedtextBox.Text += Environment.NewLine;
+            }
+            currentSpeedtextBox.Text = string.Format("Download Speed: {0}KB/s", speeds.Average());
+            File.Delete("50MB.bin");
         }
 
         private void testNetInter_Click(object sender, EventArgs e)

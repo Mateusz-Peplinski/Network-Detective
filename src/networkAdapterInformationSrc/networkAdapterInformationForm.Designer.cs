@@ -1,7 +1,7 @@
 ﻿
 namespace Network_Detective
 {
-    partial class testAllNetworkInterfaces
+    partial class networkAdapterInformationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,21 @@ namespace Network_Detective
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(networkAdapterInformationForm));
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(565, 384);
-            this.textBox1.TabIndex = 0;
-            // 
-            // testAllNetworkInterfaces
+            // networkAdapterInformationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 408);
-            this.Controls.Add(this.textBox1);
-            this.Name = "testAllNetworkInterfaces";
-            this.Text = "Network Detective (Network Interfaces Speed Tests)";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "networkAdapterInformationForm";
+            this.Text = "Network Detective (Network Adapter Infomation)";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -40,6 +40,7 @@ namespace Network_Detective
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openwifiSpeedtest = new System.Windows.Forms.Button();
+            this.NetworkAdapterInfoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@ namespace Network_Detective
             this.openPingForm.Name = "openPingForm";
             this.openPingForm.Size = new System.Drawing.Size(172, 51);
             this.openPingForm.TabIndex = 0;
-            this.openPingForm.Text = "PING";
+            this.openPingForm.Text = "Ping Test";
             this.openPingForm.UseVisualStyleBackColor = false;
             this.openPingForm.Click += new System.EventHandler(this.openPingForm_Click);
             // 
@@ -175,6 +176,20 @@ namespace Network_Detective
             this.openwifiSpeedtest.UseVisualStyleBackColor = false;
             this.openwifiSpeedtest.Click += new System.EventHandler(this.openwifiSpeedtest_Click);
             // 
+            // NetworkAdapterInfoButton
+            // 
+            this.NetworkAdapterInfoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NetworkAdapterInfoButton.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.NetworkAdapterInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NetworkAdapterInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NetworkAdapterInfoButton.Location = new System.Drawing.Point(732, 465);
+            this.NetworkAdapterInfoButton.Name = "NetworkAdapterInfoButton";
+            this.NetworkAdapterInfoButton.Size = new System.Drawing.Size(172, 51);
+            this.NetworkAdapterInfoButton.TabIndex = 10;
+            this.NetworkAdapterInfoButton.Text = "Network Adapter Info";
+            this.NetworkAdapterInfoButton.UseVisualStyleBackColor = false;
+            this.NetworkAdapterInfoButton.Click += new System.EventHandler(this.NetworkAdapterInfoButton_Click);
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +197,7 @@ namespace Network_Detective
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(945, 597);
+            this.Controls.Add(this.NetworkAdapterInfoButton);
             this.Controls.Add(this.openwifiSpeedtest);
             this.Controls.Add(this.opendumpProcessForm);
             this.Controls.Add(this.pictureBox2);
@@ -214,6 +230,7 @@ namespace Network_Detective
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button opendumpProcessForm;
         private System.Windows.Forms.Button openwifiSpeedtest;
+        private System.Windows.Forms.Button NetworkAdapterInfoButton;
     }
 }
 
