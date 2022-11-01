@@ -30,207 +30,388 @@ namespace Network_Detective
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainMenu));
-            this.openPingForm = new System.Windows.Forms.Button();
-            this.openAdvancedNetworkScan = new System.Windows.Forms.Button();
-            this.openSubnetForm = new System.Windows.Forms.Button();
-            this.openPortScanForm = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.opendumpProcessForm = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.server1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.myName = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.openwifiSpeedtest = new System.Windows.Forms.Button();
-            this.NetworkAdapterInfoButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NI_tools = new System.Windows.Forms.Button();
+            this.ND_tools = new System.Windows.Forms.Button();
+            this.NH_Tools = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.server1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // openPingForm
+            // server1
             // 
-            this.openPingForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openPingForm.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.openPingForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openPingForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPingForm.Location = new System.Drawing.Point(33, 372);
-            this.openPingForm.Name = "openPingForm";
-            this.openPingForm.Size = new System.Drawing.Size(172, 51);
-            this.openPingForm.TabIndex = 0;
-            this.openPingForm.Text = "Ping Test";
-            this.openPingForm.UseVisualStyleBackColor = false;
-            this.openPingForm.Click += new System.EventHandler(this.openPingForm_Click);
+            this.server1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.server1.Image = global::Network_Detective.Properties.Resources.serverFrame1;
+            this.server1.Location = new System.Drawing.Point(242, 448);
+            this.server1.Name = "server1";
+            this.server1.Size = new System.Drawing.Size(118, 149);
+            this.server1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.server1.TabIndex = 12;
+            this.server1.TabStop = false;
             // 
-            // openAdvancedNetworkScan
+            // pictureBox3
             // 
-            this.openAdvancedNetworkScan.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.openAdvancedNetworkScan.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.openAdvancedNetworkScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openAdvancedNetworkScan.Location = new System.Drawing.Point(372, 370);
-            this.openAdvancedNetworkScan.Name = "openAdvancedNetworkScan";
-            this.openAdvancedNetworkScan.Size = new System.Drawing.Size(172, 52);
-            this.openAdvancedNetworkScan.TabIndex = 1;
-            this.openAdvancedNetworkScan.Text = "IP Range Scan";
-            this.openAdvancedNetworkScan.UseVisualStyleBackColor = false;
-            this.openAdvancedNetworkScan.Click += new System.EventHandler(this.openAdvancedNetworkScan_Click_1);
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox3.Image = global::Network_Detective.Properties.Resources.mainMenuTitle;
+            this.pictureBox3.Location = new System.Drawing.Point(14, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(308, 154);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             // 
-            // openSubnetForm
+            // myName
             // 
-            this.openSubnetForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openSubnetForm.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.openSubnetForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openSubnetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openSubnetForm.Location = new System.Drawing.Point(33, 282);
-            this.openSubnetForm.Name = "openSubnetForm";
-            this.openSubnetForm.Size = new System.Drawing.Size(172, 51);
-            this.openSubnetForm.TabIndex = 2;
-            this.openSubnetForm.Text = "Subnet Scan";
-            this.openSubnetForm.UseVisualStyleBackColor = false;
-            this.openSubnetForm.Click += new System.EventHandler(this.openSubnetForm_Click);
-            // 
-            // openPortScanForm
-            // 
-            this.openPortScanForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.openPortScanForm.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.openPortScanForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPortScanForm.Location = new System.Drawing.Point(372, 282);
-            this.openPortScanForm.Name = "openPortScanForm";
-            this.openPortScanForm.Size = new System.Drawing.Size(172, 51);
-            this.openPortScanForm.TabIndex = 3;
-            this.openPortScanForm.Text = "Port Scan";
-            this.openPortScanForm.UseVisualStyleBackColor = false;
-            this.openPortScanForm.Click += new System.EventHandler(this.openPortScanForm_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(732, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 52);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Advanced Port Scan";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(732, 370);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 52);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Trace Route";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // opendumpProcessForm
-            // 
-            this.opendumpProcessForm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.opendumpProcessForm.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.opendumpProcessForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opendumpProcessForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opendumpProcessForm.Location = new System.Drawing.Point(33, 465);
-            this.opendumpProcessForm.Name = "opendumpProcessForm";
-            this.opendumpProcessForm.Size = new System.Drawing.Size(172, 51);
-            this.opendumpProcessForm.TabIndex = 8;
-            this.opendumpProcessForm.Text = "Dump Process";
-            this.opendumpProcessForm.UseVisualStyleBackColor = false;
-            this.opendumpProcessForm.Click += new System.EventHandler(this.dumpProcessForm_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Network_Detective.Properties.Resources.mainMenuTitle_NAME;
-            this.pictureBox2.Location = new System.Drawing.Point(1, -51);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 75);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.myName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.myName.Image = global::Network_Detective.Properties.Resources.mainMenuTitle_NAME_WHITE;
+            this.myName.Location = new System.Drawing.Point(61, 80);
+            this.myName.Name = "myName";
+            this.myName.Size = new System.Drawing.Size(235, 205);
+            this.myName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.myName.TabIndex = 7;
+            this.myName.TabStop = false;
+            this.myName.Click += new System.EventHandler(this.myName_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox1.Image = global::Network_Detective.Properties.Resources.mainMenuTitle256;
-            this.pictureBox1.Location = new System.Drawing.Point(244, 12);
+            this.pictureBox1.Image = global::Network_Detective.Properties.Resources.mainMenuTitle;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 248);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(296, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
-            // openwifiSpeedtest
+            // menuStrip1
             // 
-            this.openwifiSpeedtest.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openwifiSpeedtest.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.openwifiSpeedtest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openwifiSpeedtest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openwifiSpeedtest.Location = new System.Drawing.Point(372, 465);
-            this.openwifiSpeedtest.Name = "openwifiSpeedtest";
-            this.openwifiSpeedtest.Size = new System.Drawing.Size(172, 51);
-            this.openwifiSpeedtest.TabIndex = 9;
-            this.openwifiSpeedtest.Text = "WIFI Speed Test";
-            this.openwifiSpeedtest.UseVisualStyleBackColor = false;
-            this.openwifiSpeedtest.Click += new System.EventHandler(this.openwifiSpeedtest_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(344, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // NetworkAdapterInfoButton
+            // fileToolStripMenuItem
             // 
-            this.NetworkAdapterInfoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NetworkAdapterInfoButton.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.NetworkAdapterInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NetworkAdapterInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NetworkAdapterInfoButton.Location = new System.Drawing.Point(732, 465);
-            this.NetworkAdapterInfoButton.Name = "NetworkAdapterInfoButton";
-            this.NetworkAdapterInfoButton.Size = new System.Drawing.Size(172, 51);
-            this.NetworkAdapterInfoButton.TabIndex = 10;
-            this.NetworkAdapterInfoButton.Text = "Network Adapter Info";
-            this.NetworkAdapterInfoButton.UseVisualStyleBackColor = false;
-            this.NetworkAdapterInfoButton.Click += new System.EventHandler(this.NetworkAdapterInfoButton_Click);
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator,
+            this.toolStripSeparator1,
+            this.printToolStripMenuItem,
+            this.printPreviewToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(140, 6);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.printToolStripMenuItem.Text = "&Print";
+            // 
+            // printPreviewToolStripMenuItem
+            // 
+            this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
+            this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customizeToolStripMenuItem,
+            this.optionsToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // customizeToolStripMenuItem
+            // 
+            this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
+            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.customizeToolStripMenuItem.Text = "&Customize";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.optionsToolStripMenuItem.Text = "&Options";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.searchToolStripMenuItem.Text = "&Search";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(113, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
+            // 
+            // NI_tools
+            // 
+            this.NI_tools.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.NI_tools.BackColor = System.Drawing.Color.Transparent;
+            this.NI_tools.FlatAppearance.BorderSize = 0;
+            this.NI_tools.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NI_tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.NI_tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NI_tools.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NI_tools.ForeColor = System.Drawing.Color.LawnGreen;
+            this.NI_tools.Location = new System.Drawing.Point(48, 189);
+            this.NI_tools.Name = "NI_tools";
+            this.NI_tools.Size = new System.Drawing.Size(252, 70);
+            this.NI_tools.TabIndex = 14;
+            this.NI_tools.Text = "Network Infomation Tools";
+            this.NI_tools.UseVisualStyleBackColor = false;
+            this.NI_tools.Click += new System.EventHandler(this.NI_tools_Click);
+            // 
+            // ND_tools
+            // 
+            this.ND_tools.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ND_tools.BackColor = System.Drawing.Color.Transparent;
+            this.ND_tools.FlatAppearance.BorderSize = 0;
+            this.ND_tools.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ND_tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ND_tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ND_tools.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ND_tools.ForeColor = System.Drawing.Color.LawnGreen;
+            this.ND_tools.Location = new System.Drawing.Point(48, 272);
+            this.ND_tools.Name = "ND_tools";
+            this.ND_tools.Size = new System.Drawing.Size(252, 64);
+            this.ND_tools.TabIndex = 15;
+            this.ND_tools.Text = "Network Diagnostics Tools";
+            this.ND_tools.UseVisualStyleBackColor = false;
+            this.ND_tools.Click += new System.EventHandler(this.ND_tools_Click);
+            // 
+            // NH_Tools
+            // 
+            this.NH_Tools.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.NH_Tools.BackColor = System.Drawing.Color.Transparent;
+            this.NH_Tools.FlatAppearance.BorderSize = 0;
+            this.NH_Tools.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NH_Tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.NH_Tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NH_Tools.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NH_Tools.ForeColor = System.Drawing.Color.LawnGreen;
+            this.NH_Tools.Location = new System.Drawing.Point(48, 351);
+            this.NH_Tools.Name = "NH_Tools";
+            this.NH_Tools.Size = new System.Drawing.Size(252, 65);
+            this.NH_Tools.TabIndex = 16;
+            this.NH_Tools.Text = "Network Hardware Information Tools";
+            this.NH_Tools.UseVisualStyleBackColor = false;
+            this.NH_Tools.Click += new System.EventHandler(this.NH_Tools_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label1.Location = new System.Drawing.Point(12, 457);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Network Information Tools:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label2.Location = new System.Drawing.Point(12, 499);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 15);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Network Diagnostics Tools:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label3.Location = new System.Drawing.Point(12, 536);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 15);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Network Hardware Tools:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label4.Location = new System.Drawing.Point(9, 551);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 15);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "TEXTETXTTEXTTEXT";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label5.Location = new System.Drawing.Point(9, 514);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 15);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "TEXTETXTTEXTTEXT";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label6.Location = new System.Drawing.Point(9, 472);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 15);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "TEXTETXTTEXTTEXT";
             // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(945, 597);
-            this.Controls.Add(this.NetworkAdapterInfoButton);
-            this.Controls.Add(this.openwifiSpeedtest);
-            this.Controls.Add(this.opendumpProcessForm);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(344, 597);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NH_Tools);
+            this.Controls.Add(this.ND_tools);
+            this.Controls.Add(this.NI_tools);
+            this.Controls.Add(this.server1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.openPortScanForm);
-            this.Controls.Add(this.openSubnetForm);
-            this.Controls.Add(this.openAdvancedNetworkScan);
-            this.Controls.Add(this.openPingForm);
+            this.Controls.Add(this.myName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainMenu";
             this.Text = "Network Detective";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainMenu_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.server1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button openPingForm;
-        private System.Windows.Forms.Button openAdvancedNetworkScan;
-        private System.Windows.Forms.Button openSubnetForm;
-        private System.Windows.Forms.Button openPortScanForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button opendumpProcessForm;
-        private System.Windows.Forms.Button openwifiSpeedtest;
-        private System.Windows.Forms.Button NetworkAdapterInfoButton;
+        private System.Windows.Forms.PictureBox myName;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox server1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button NI_tools;
+        private System.Windows.Forms.Button ND_tools;
+        private System.Windows.Forms.Button NH_Tools;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

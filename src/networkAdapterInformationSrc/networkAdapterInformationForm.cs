@@ -34,14 +34,14 @@ namespace Network_Detective
 
             IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
-            String mainTitle = $"Interface information for {computerProperties.HostName}.{computerProperties.DomainName}";
-            mainListBox.Items.Add(mainTitle);
+            String mainTitle = $"### Interface information for {computerProperties.HostName}.{computerProperties.DomainName} ###";
+            titleText.Text = mainTitle;
             if (nics == null || nics.Length < 1)
             {
                 mainListBox.Items.Add("  No network interfaces found.");
                 return;
             }
-            mainListBox.Items.Add($"  Number of interfaces .................... : {nics.Length}");
+            numOfAdapt.Text = $"Network Detective has found {nics.Length} Network Interfaces on {computerProperties.HostName}";
             foreach (NetworkInterface adapter in nics)
             {
                 
@@ -52,8 +52,10 @@ namespace Network_Detective
                 mainListBox.Items.Add($"  Interface type .......................... : {adapter.NetworkInterfaceType}");
                 mainListBox.Items.Add($"  Speed  .................................... :{adapter.Speed} bits per second");
                 //mainListBox.Items.Add($"{adapter.GetIPProperties()}");
-                mainListBox.Items.Add($"IP {adapter.GetIPProperties().UnicastAddresses[1].Address.ToString()}");
-                mainListBox.Items.Add($"IP {adapter.GetIPProperties().UnicastAddresses[0].Address.ToString()}");
+                mainListBox.ForeColor = Color.Green;
+                mainListBox.Items.Add($"  IP .........................................:{adapter.GetIPProperties().UnicastAddresses[1].Address.ToString()}");
+                mainListBox.Items.Add($"  IP .........................................:{adapter.GetIPProperties().UnicastAddresses[0].Address.ToString()}");
+                mainListBox.ForeColor = Color.White;
                 mainListBox.Items.Add($"  Physical Address ........................ : {adapter.GetPhysicalAddress().ToString()}");
                 mainListBox.Items.Add($"  Operational status ...................... : {adapter.OperationalStatus}");
                 string versions = "";

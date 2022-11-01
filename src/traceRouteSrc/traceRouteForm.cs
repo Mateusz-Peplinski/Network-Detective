@@ -9,26 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Threading;
 
 namespace Network_Detective
 {
     public partial class traceRouteForm : Form
     {
+        private Thread trc_THREAD;
         public traceRouteForm()
         {
             InitializeComponent();
         }
-
+        // add thread soution
         private void startTraceButton_Click(object sender, EventArgs e)
         {
             String destination = traceInputTextBox.Text;
             resultTextBox.Clear();
-            startTraceRoute(destination);
+            trc_THREAD = new Thread(() => startTraceRoute(destination));
+            trc_THREAD.Start();
+            //startTraceRoute(destination);
         }
 
         public void startTraceRoute(string destination)
         {
-            
+
             for (int i = 1; i < 20; i++)
             {
                 String ip = getPacketRoute(destination, i);
@@ -42,11 +46,11 @@ namespace Network_Detective
                     String hostName = getHostName(ip);
                     resultTextBox.Text += String.Format("[{0}] - {1} [ {2} ] {3}", i, ip, hostName, Environment.NewLine);
                 }
-                else 
+                else
                 {
                     resultTextBox.Text += String.Format("[{0}] - {1} {2}", i, ip, Environment.NewLine);
                 }
-                
+
             }
         }
         private string getHostName(string ipAdress)
@@ -60,9 +64,9 @@ namespace Network_Detective
             }
             catch (Exception ex)
             {
-                
+
             }
-            if (hostName == "")
+            if (hostName == null)
             {
                 return "Hostname not Found !";
             }
@@ -86,7 +90,7 @@ namespace Network_Detective
 
             if (reply.Status == IPStatus.Success || reply.Status == IPStatus.TtlExpired)
             {
-                
+
                 return reply.Address.ToString();
             }
             else
@@ -95,6 +99,14 @@ namespace Network_Detective
             }
         }
 
-        
+        private void stopTraceRoute_Click(object sender, EventArgs e)
+        {
+            trc_THREAD.Abort();
+        }
+
+        private void traceRouteForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            trc_THREAD.Abort();
+        }
     }
 }

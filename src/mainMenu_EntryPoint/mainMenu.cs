@@ -11,79 +11,144 @@ using Network_Detective.portScanningClass;
 using Network_Detective.subnetClass;
 using Network_Detective.src.processDumperClass;
 using Network_Detective.src.speedTestSrc;
-    
+using System.CodeDom;
+using System.Threading;
+
 namespace Network_Detective
 {
     public partial class mainMenu : Form
     {
+        private Color ALPHA_buttonColour = Color.FromArgb(20, 90, 90, 90);
+        private Thread animationServerThread;
         public mainMenu()
         {
             InitializeComponent();
+            FORCE_ARGB();
+            this.DoubleBuffered = true;
+            animationServerThread = new Thread(Animation_THREAD);
+            animationServerThread.Start();
+           
         }
 
-        private void openPingForm_Click(object sender, EventArgs e)
+
+        // CLICK EVENT REGION BELOW
+       
+
+        // ANIMATION REGION BELOW
+        #region
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pingForm pingForm = new pingForm();
-            pingForm.Show();
+            pictureBox1.Visible = true;
+            pictureBox3.Visible = false;
+        }
+        
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox3.Visible = true;
+            pictureBox1.Visible = false;
+        }
+        #endregion
+
+       
+        
+        private void FORCE_ARGB()
+        {
+            //NI_tools.BackColor = Color.FromArgb(20, 90, 90, 90);
+            NI_tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(20, 90, 90, 90);
+            ND_tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(20, 90, 90, 90);
+            NH_Tools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(20, 90, 90, 90);
         }
 
-        private void openSubnetForm_Click(object sender, EventArgs e)
+        public void Animation_THREAD()
         {
-            subnetScanForm subnetScanForm = new subnetScanForm();
-            subnetScanForm.Show();
+            Random randGENERATOR = new Random();
+            while (true)
+            {
+                int randomNum = randGENERATOR.Next(0,11);
+                switch (randomNum)
+                {
+                    case 0:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame1;
+                        Thread.Sleep(100);
+                        break;
+                    case 1:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame2;
+                        Thread.Sleep(100);
+                        break;
+                    case 2:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame3;
+                        Thread.Sleep(100);
+                        break;
+                    case 3:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame4;
+                        Thread.Sleep(100);
+                        break;
+                    case 4:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame5;
+                        Thread.Sleep(100);
+                        break;
+                    case 5:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame6;
+                        Thread.Sleep(100);
+                        break;
+                    case 6:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame7;
+                        Thread.Sleep(100);
+                        break;
+                    case 7:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame8;
+                        Thread.Sleep(100);
+                        break;
+                    case 8:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame9;
+                        Thread.Sleep(100);
+                        break;
+                    case 9:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame10;
+                        Thread.Sleep(100);
+                        break;
+                    case 10:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame1;
+                        Thread.Sleep(100);
+                        break;
+                    case 11:
+                        server1.Image = global::Network_Detective.Properties.Resources.serverFrame5;
+                        Thread.Sleep(100);
+                        break;
+
+                     
+                    default:
+                        break;
+                }
+            }
         }
 
-        private void openPortScanForm_Click(object sender, EventArgs e)
-        {
-            portScanForm portScanForm = new portScanForm();
-            portScanForm.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //ADD About when the user presses the picture
-        }
+        
 
         private void mainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            animationServerThread.Abort();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NI_tools_Click(object sender, EventArgs e)
         {
-            portScanAdvanced portScanAdvancedFrom = new portScanAdvanced();
-            portScanAdvancedFrom.Show();
+
         }
 
-
-        private void openAdvancedNetworkScan_Click_1(object sender, EventArgs e)
+        private void ND_tools_Click(object sender, EventArgs e)
         {
-            rangeScan advSubnetForm = new rangeScan();
-            advSubnetForm.Show();
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void NH_Tools_Click(object sender, EventArgs e)
         {
-            traceRouteForm traceRouteForm = new traceRouteForm();
-            traceRouteForm.Show();
+
         }
 
-        private void dumpProcessForm_Click(object sender, EventArgs e)
+        private void myName_Click(object sender, EventArgs e)
         {
-            processDumperForm processDumperForm = new processDumperForm();
-            processDumperForm.Show();
-        }
-
-        private void openwifiSpeedtest_Click(object sender, EventArgs e)
-        {
-            wifiSpeedTestForm wifiSpeedTestForm = new wifiSpeedTestForm();
-            wifiSpeedTestForm.Show();
-        }
-
-        private void NetworkAdapterInfoButton_Click(object sender, EventArgs e)
-        {
-            networkAdapterInformationForm networkAdapterInformationForm = new networkAdapterInformationForm();
-            networkAdapterInformationForm.Show();
+            System.Diagnostics.Process.Start("https://github.com/0xInvicta");
         }
     }
 }

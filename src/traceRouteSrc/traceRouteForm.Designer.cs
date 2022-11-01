@@ -35,10 +35,14 @@ namespace Network_Detective
             this.label1 = new System.Windows.Forms.Label();
             this.traceInputTextBox = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.stopTraceRoute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // resultTextBox
             // 
+            this.resultTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.resultTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultTextBox.ForeColor = System.Drawing.Color.Chartreuse;
             this.resultTextBox.Location = new System.Drawing.Point(252, 3);
             this.resultTextBox.Multiline = true;
             this.resultTextBox.Name = "resultTextBox";
@@ -49,7 +53,7 @@ namespace Network_Detective
             // startTraceButton
             // 
             this.startTraceButton.BackColor = System.Drawing.Color.LawnGreen;
-            this.startTraceButton.Location = new System.Drawing.Point(74, 74);
+            this.startTraceButton.Location = new System.Drawing.Point(29, 69);
             this.startTraceButton.Name = "startTraceButton";
             this.startTraceButton.Size = new System.Drawing.Size(75, 23);
             this.startTraceButton.TabIndex = 1;
@@ -60,6 +64,7 @@ namespace Network_Detective
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
@@ -76,6 +81,7 @@ namespace Network_Detective
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(6, 35);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(131, 17);
@@ -83,12 +89,24 @@ namespace Network_Detective
             this.checkBox1.Text = "Show with Hostnames";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // stopTraceRoute
+            // 
+            this.stopTraceRoute.BackColor = System.Drawing.Color.Crimson;
+            this.stopTraceRoute.Location = new System.Drawing.Point(134, 69);
+            this.stopTraceRoute.Name = "stopTraceRoute";
+            this.stopTraceRoute.Size = new System.Drawing.Size(75, 23);
+            this.stopTraceRoute.TabIndex = 5;
+            this.stopTraceRoute.Text = "Stop";
+            this.stopTraceRoute.UseVisualStyleBackColor = false;
+            this.stopTraceRoute.Click += new System.EventHandler(this.stopTraceRoute_Click);
+            // 
             // traceRouteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.stopTraceRoute);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.traceInputTextBox);
             this.Controls.Add(this.label1);
@@ -97,6 +115,7 @@ namespace Network_Detective
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "traceRouteForm";
             this.Text = "Network Detective (Trace Route)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.traceRouteForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +128,6 @@ namespace Network_Detective
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox traceInputTextBox;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button stopTraceRoute;
     }
 }
