@@ -14,7 +14,7 @@ Network Detective is a network information gathering tool. (IN PROGRESS)
 ![MainWindow](READMEimg/Capture.PNG)
 </br>
 <p align="left">
-![NetInfo](READMEimg/NetworkInformation.gif)
+  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
 </p>
 Future Updates:
 
