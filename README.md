@@ -10,9 +10,9 @@
 
 
 <h5 align="center"> Network Detective is a general purpose network information gathering tool. [IN PROGRESS]</h5>
-<a align="center">
+<p align="center">
   ![MainWindow](READMEimg/Capture.PNG)
- </a>
+ </p>
 </br>
 <p align="left">
   <h5>Network Information Menu</h5>
