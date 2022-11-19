@@ -14,20 +14,17 @@
   <img src="READMEimg/Capture.PNG" alt="mainMenu">
  </p>
 </br>
- <h5>Network Information Menu</h5>    <h5>Network Information Menu</h5>
- <img src="READMEimg/NetworkInformation.gif" alt="NetInfo" width="200"> <img src="READMEimg/remoteHost.gif" alt="NetInfo" width="200">
- </br>
  </br>
   <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+    <td>Network Information Menu</td>
+     <td>Remote Host Menu</td>
+     <td>Network Hardware Information</td>
   </tr>
   <tr>
     <td><img src="READMEimg/NetworkInformation.gif" width=270 height=480></td>
     <td><img src="READMEimg/remoteHost.gif" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+    <td><img src="TEXT" width=270 height=480 alt="InProgress"></td>
   </tr>
  </table>
 Future Updates:
