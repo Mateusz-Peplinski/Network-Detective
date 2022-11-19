@@ -15,7 +15,7 @@
  </p>
 </br>
  <h5>Network Information Menu</h5>    <h5>Network Information Menu</h5>
- <img src="READMEimg/NetworkInformation.gif" alt="NetInfo"> <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
+ <img src="READMEimg/NetworkInformation.gif" alt="NetInfo" width="200"> <img src="READMEimg/NetworkInformation.gif" alt="NetInfo" width="200">
   
 Future Updates:
 
