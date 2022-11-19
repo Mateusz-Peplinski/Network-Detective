@@ -18,6 +18,10 @@
   <h5>Network Information Menu</h5>
   <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
 </p>
+<p align="center">
+  <h5>Network Information Menu</h5>
+  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
+</p>
 Future Updates:
 
 --> Basic Network Packet Capture  
