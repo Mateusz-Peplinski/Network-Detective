@@ -15,13 +15,9 @@
  </p>
 </br>
 <p align="left">
-  <h5>Network Information Menu</h5>
-  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
-</p>
-<p align="center">
-  <h5>Network Information Menu</h5>
-  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
-</p>
+  <h5>Network Information Menu</h5>    <h5>Network Information Menu</h5>
+  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo"> <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
+  
 Future Updates:
 
 --> Basic Network Packet Capture  
