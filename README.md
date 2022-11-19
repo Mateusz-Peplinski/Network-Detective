@@ -14,9 +14,8 @@
   <img src="READMEimg/Capture.PNG" alt="mainMenu">
  </p>
 </br>
-<p align="left">
-  <h5>Network Information Menu</h5>    <h5>Network Information Menu</h5>
-  <img src="READMEimg/NetworkInformation.gif" alt="NetInfo"> <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
+ <h5>Network Information Menu</h5>    <h5>Network Information Menu</h5>
+ <img src="READMEimg/NetworkInformation.gif" alt="NetInfo"> <img src="READMEimg/NetworkInformation.gif" alt="NetInfo">
   
 Future Updates:
 
