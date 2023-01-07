@@ -24,7 +24,7 @@
   <tr>
     <td><img src="READMEimg/NetworkInformation.gif" width=270 height=480></td>
     <td><img src="READMEimg/remoteHost.gif" width=270 height=480></td>
-    <td><img src="READMEimg/networkHardware.jpg" width=270 height=480 alt="InProgress"></td>
+    <td><img src="READMEimg/NetworkHardware.jpg" width=270 height=480 alt="InProgress"></td>
   </tr>
  </table>
 Future Updates:
